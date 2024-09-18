@@ -27,7 +27,7 @@ jobs:
 
   create-release:
     name: Create Release
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     needs: fetch-aseprite-info
     permissions:
       contents: write
@@ -51,7 +51,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
         matrix:
-          os: [ windows-latest, ubuntu-latest, macOS-latest ]
+          os: [ windows-latest ]
         fail-fast: false
     steps:
       - name: Install dependencies (Windows)
